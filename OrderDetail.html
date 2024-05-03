@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Details Page</title>
+    <link rel="stylesheet" href="Asserts/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("Asserts/pos1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+<body>
+
+<header >
+    <div class="container-fluid">
+        <div class="banner">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <img src="Asserts/pos.jpg" class="logo" alt="Logo" width="60px"height="50px">
+                    <ul class="navbar-nav ms-auto" >
+                        <li class="nav-item"><a class="nav-link" href="index.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="customer.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Customer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="item.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Item</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Order.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="OrderDetail.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Order Detail</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</header>
+<main id="orderDetails">
+    <section>
+        <div id="form">
+            <div class="text-center gradient-text text-light mt-3">
+                <h3>Order Details Form</h3>
+            </div>
+
+            <div class="col" id="table">
+               <!-- mt-5 moving space down-->
+                <table class="table table-bordered table-hover mt-5">
+                    <thead class="table-info">
+                    <tr>
+                        <th scope="col">Order Id</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Customer Id</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">Sub Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>2023-08-04</td>
+                        <td>1</td>
+                        <td>12000</td>
+                        <td>10%</td>
+                        <td>10800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>2023-08-04</td>
+                        <td>2</td>
+                        <td>12000</td>
+                        <td>10%</td>
+                        <td>10800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>2023-08-04</td>
+                        <td>3</td>
+                        <td>12000</td>
+                        <td>10%</td>
+                        <td>10800</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="Asserts/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

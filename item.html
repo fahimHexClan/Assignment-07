@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+    <link rel="stylesheet" href="Asserts/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("Asserts/pos1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <div class="banner">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <img src="Asserts/pos.jpg" class="logo" alt="Logo" width="60px"height="50px">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="customer.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Customer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="item.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Item</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Order.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="OrderDetail.html" style="font-size: 1.2rem; color: #fff; margin-right: 20px;">Order Detail</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h1 class="text-center mt-5 text-light">Item Management</h1>
+    <div class="input-group mt-3">
+        <input type="search" class="form-control" placeholder="Search Item" aria-label="Search Item">
+        <button class="btn btn-primary" type="button">Search</button>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <label for="ItemId" class="form-label text-light">Item Id</label>
+            <input class="form-control mb-3" type="text" id="ItemId" placeholder="Enter Item Id">
+
+            <label for="ItemName" class="form-label text-light">Item Name</label>
+            <input class="form-control mb-3" type="text" id="ItemName" placeholder="Enter Item Name">
+        </div>
+        <div class="col-md-6">
+            <label for="Price" class="form-label text-light">Item Price</label>
+            <input class="form-control mb-3" type="text" id="Price" placeholder="Enter Item Price">
+
+            <label for="Qty" class="form-label text-light">Item Qty</label>
+            <input class="form-control mb-3" type="text" id="Qty" placeholder="Enter Item Qty">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <button class="btn btn-primary me-2">Add</button>
+            <button class="btn btn-danger me-2">Delete</button>
+            <button class="btn btn-success">Renew</button>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <!--(table-hover) mouse eka aran yanakota highilith wenawa-->
+            <table class="table table-bordered  table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Item Id</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Item Qty</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>I001</td>
+                    <td>T-Shirt</td>
+                    <td>1000.00</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>I002</td>
+                    <td>Shirt</td>
+                    <td>2000.00</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>I003</td>
+                    <td>Trousers</td>
+                    <td>3000.00</td>
+                    <td>250</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="Asserts/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
