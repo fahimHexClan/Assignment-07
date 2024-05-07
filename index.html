@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nesta POS System</title>
     <link rel="stylesheet" href="Asserts/bootstrap-5.3.1-dist/css/bootstrap.min.css">
     <style>
         body {
@@ -14,20 +14,6 @@
             margin: 0;
             padding: 0;
         }
-
-
-/*
-        @media (max-width: 768px) {
-            .navbar-nav {
-                display: inherit;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .display-1 {
-                font-size: 2.5rem;
-            }
-        }*/
     </style>
 </head>
 <body>
@@ -36,33 +22,225 @@
         <div class="banner">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                    <img src="Asserts/pos.jpg" class="logo" alt="Logo" width="60px"height="50px">
+                    <img src="Asserts/pos.jpg" class="logo" alt="Logo" width="60px" height="50px">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="customer.html">Customer</a></li>
-                        <li class="nav-item"><a class="nav-link" href="item.html">Item</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Order.html">Order</a></li>
-                        <li class="nav-item"><a class="nav-link" href="OrderDetail.html">Order Detail</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('home')">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('customer')">Customer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('item')">Item</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('order')">Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('orderDetail')">Order Detail</a></li>
                     </ul>
                 </div>
             </nav>
-
         </div>
     </div>
-
 </header>
+
 <div class="container">
-    <div class="row justify-content-center align-items-center" style="height: 100vh;">
-        <div class="col-md-6 text-center">
-            <h1 class="text-light display-1">Nesta POS System</h1>
-            <p class="text-light">A POS system website helps businesses manage sales, process transactions, track inventory, and improve efficiency.</p>
-            <div>
-                <button type="button" class="btn btn-outline-primary">Watch</button>
-                <button type="button" class="btn btn-outline-secondary">Subs</button>
+    <div id="home" class="page">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-md-6 text-center">
+                <h1 class="text-light display-1">Nesta POS System</h1>
+                <p class="text-light">A POS system website helps businesses manage sales, process transactions, track inventory, and improve efficiency.</p>
+                <div>
+                    <button type="button" class="btn btn-outline-primary">Watch</button>
+                    <button type="button" class="btn btn-outline-secondary">Subs</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <div id="customer" class="page" style="display: none;">
+        <header class="mt-5">
+            <h1 class="text-center text-light">Customer Management</h1>
+            <div class="input-group mt-3">
+                <input type="search" class="form-control" placeholder="Search Customer" aria-label="Search Customer">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </header>
+        <br>
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="id" class="text-light">Customer Id</label>
+                        <input class="form-control" type="text" id="Id" placeholder="Enter Customer Id">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="text-light">Customer Name</label>
+                        <input class="form-control" type="text" id="name" placeholder="Enter Customer Name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="address" class="text-light">Customer Address</label>
+                        <input class="form-control" type="text" id="address" placeholder="Enter Customer Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="salary" class="text-light">Customer Salary</label>
+                        <input class="form-control" type="text" id="salary" placeholder="Enter Customer Salary">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-3">
+            <button class="btn btn-primary me-2" type="button">Add</button>
+            <button class="btn btn-danger me-2" type="button">Delete</button>
+            <button class="btn btn-success" type="button">Renew</button>
+        </section>
+        <section class="mt-5">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>C001</td>
+                    <td>Sana</td>
+                    <td>Badulla</td>
+                    <td>100,000.00</td>
+                </tr>
+                <tr>
+                    <td>C002</td>
+                    <td>Kamal</td>
+                    <td>Colombo</td>
+                    <td>200,000.00</td>
+                </tr>
+                <tr>
+                    <td>C003</td>
+                    <td>Nimal</td>
+                    <td>Panadura</td>
+                    <td>400,000.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <div id="item" class="page" style="display: none;">
+        <!-- Item Management HTML -->
+        <header class="mt-5">
+            <h1 class="text-center text-light">Item Management</h1>
+            <div class="input-group mt-3">
+                <input type="search" class="form-control" placeholder="Search Item" aria-label="Search Item">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </header>
+        <br>
+        <section class="mt-5">
+            <!-- Item form fields (e.g., Id, Name, Price, Quantity) -->
+        </section>
+        <section class="mt-3">
+            <button class="btn btn-primary me-2" type="button">Add</button>
+            <button class="btn btn-danger me-2" type="button">Delete</button>
+            <button class="btn btn-success" type="button">Update</button>
+        </section>
+        <section class="mt-5">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Item table rows (e.g., Id, Name, Price, Quantity) -->
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <div id="order" class="page" style="display: none;">
+        <!-- Order Management HTML -->
+        <header class="mt-5">
+            <h1 class="text-center text-light">Order Management</h1>
+            <div class="input-group mt-3">
+                <input type="search" class="form-control" placeholder="Search Order" aria-label="Search Order">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </header>
+        <br>
+        <section class="mt-5">
+            <!-- Order form fields (e.g., Id, Customer, Date, Total) -->
+        </section>
+        <section class="mt-3">
+            <button class="btn btn-primary me-2" type="button">Add</button>
+            <button class="btn btn-danger me-2" type="button">Delete</button>
+            <button class="btn btn-success" type="button">Update</button>
+        </section>
+        <section class="mt-5">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Order table rows (e.g., Id, Customer, Date, Total) -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <div id="orderDetail" class="page" style="display: none;">
+        <!-- Order Detail Management HTML -->
+        <header class="mt-5">
+            <h1 class="text-center text-light">Order Detail Management</h1>
+            <div class="input-group mt-3">
+                <input type="search" class="form-control" placeholder="Search Order Detail" aria-label="Search Order Detail">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </header>
+        <br>
+        <section class="mt-5">
+            <!-- Order Detail form fields (e.g., OrderId, Item, Quantity, Price) -->
+        </section>
+        <section class="mt-3">
+            <button class="btn btn-primary me-2" type="button">Add</button>
+            <button class="btn btn-danger me-2" type="button">Delete</button>
+            <button class="btn btn-success" type="button">Update</button>
+        </section>
+        <section class="mt-5">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Order Id</th>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Order Detail table rows (e.g., OrderId, Item, Quantity, Price) -->
+                </tbody>
+            </table>
+        </section>
+
+    </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="Asserts/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showPage(pageId) {
+        $('.page').hide();
+        $('#' + pageId).show();
+    }
+
+    $(document).ready(function() {
+        showPage('home'); // Show home page by default
+    });
+</script>
 </body>
 </html>
